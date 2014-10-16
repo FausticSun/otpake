@@ -14,16 +14,19 @@ OTPakeServer::OTPakeServer(string uID, string oEphemeral, string oneTimePassword
 
 OTPakeServer::OTPakeServer(string pv, string sE, string oE,
                             string uID, string vs, string otpss,
-                            string ss) : OTPake(uID) {
+                            string sss, string k, string otpo, string ss) : OTPake(uID) {
     privateKey = pv;
     selfEphemeral = sE;
     otherEphemeral = oE;
     verifications = splitString(vs);
     OTPs = splitString(otpss);
-    vector<string> preSS = splitString(ss);
+    vector<string> preSS = splitString(sss);
     for(vector<string>::size_type i = 0; i != preSS.size(); i++) {
         sharedSecrets.push_back(mpz_class(preSS[i]));
     }
+    sharedKey= k;
+    OTP = otpo;
+    sharedSecret = ss;
 }
 
 void OTPakeServer::genSharedKey(string otherVerification) {

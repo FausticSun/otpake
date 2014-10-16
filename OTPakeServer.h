@@ -16,7 +16,7 @@ class OTPakeServer : public OTPake {
         OTPakeServer(string uniqueID, string otherEphemeral, string OTPs);
         OTPakeServer(string pv, string sE, string oE,
                         string uID, string vs, string otpss,
-                        string ss);
+                        string sss, string k, string otpo, string ss);
         void genSharedKey(string otherVerification);
         string getVerifications();
         string getOTPs();

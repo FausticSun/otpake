@@ -4850,6 +4850,9 @@ SWIGINTERN PyObject *_wrap_new_OTPakeServer__SWIG_1(PyObject *SWIGUNUSEDPARM(sel
   string arg5 ;
   string arg6 ;
   string arg7 ;
+  string arg8 ;
+  string arg9 ;
+  string arg10 ;
   PyObject * obj0 = 0 ;
   PyObject * obj1 = 0 ;
   PyObject * obj2 = 0 ;
@@ -4857,9 +4860,12 @@ SWIGINTERN PyObject *_wrap_new_OTPakeServer__SWIG_1(PyObject *SWIGUNUSEDPARM(sel
   PyObject * obj4 = 0 ;
   PyObject * obj5 = 0 ;
   PyObject * obj6 = 0 ;
+  PyObject * obj7 = 0 ;
+  PyObject * obj8 = 0 ;
+  PyObject * obj9 = 0 ;
   OTPakeServer *result = 0 ;
   
-  if (!PyArg_ParseTuple(args,(char *)"OOOOOOO:new_OTPakeServer",&obj0,&obj1,&obj2,&obj3,&obj4,&obj5,&obj6)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OOOOOOOOOO:new_OTPakeServer",&obj0,&obj1,&obj2,&obj3,&obj4,&obj5,&obj6,&obj7,&obj8,&obj9)) SWIG_fail;
   {
     std::string *ptr = (std::string *)0;
     int res = SWIG_AsPtr_std_string(obj0, &ptr);
@@ -4923,7 +4929,34 @@ SWIGINTERN PyObject *_wrap_new_OTPakeServer__SWIG_1(PyObject *SWIGUNUSEDPARM(sel
     arg7 = *ptr;
     if (SWIG_IsNewObj(res)) delete ptr;
   }
-  result = (OTPakeServer *)new OTPakeServer(arg1,arg2,arg3,arg4,arg5,arg6,arg7);
+  {
+    std::string *ptr = (std::string *)0;
+    int res = SWIG_AsPtr_std_string(obj7, &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "new_OTPakeServer" "', argument " "8"" of type '" "string""'"); 
+    }
+    arg8 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  {
+    std::string *ptr = (std::string *)0;
+    int res = SWIG_AsPtr_std_string(obj8, &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "new_OTPakeServer" "', argument " "9"" of type '" "string""'"); 
+    }
+    arg9 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  {
+    std::string *ptr = (std::string *)0;
+    int res = SWIG_AsPtr_std_string(obj9, &ptr);
+    if (!SWIG_IsOK(res) || !ptr) {
+      SWIG_exception_fail(SWIG_ArgError((ptr ? res : SWIG_TypeError)), "in method '" "new_OTPakeServer" "', argument " "10"" of type '" "string""'"); 
+    }
+    arg10 = *ptr;
+    if (SWIG_IsNewObj(res)) delete ptr;
+  }
+  result = (OTPakeServer *)new OTPakeServer(arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10);
   resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_OTPakeServer, SWIG_POINTER_NEW |  0 );
   return resultobj;
 fail:
@@ -4933,12 +4966,12 @@ fail:
 
 SWIGINTERN PyObject *_wrap_new_OTPakeServer(PyObject *self, PyObject *args) {
   int argc;
-  PyObject *argv[8];
+  PyObject *argv[11];
   int ii;
   
   if (!PyTuple_Check(args)) SWIG_fail;
   argc = args ? (int)PyObject_Length(args) : 0;
-  for (ii = 0; (ii < 7) && (ii < argc); ii++) {
+  for (ii = 0; (ii < 10) && (ii < argc); ii++) {
     argv[ii] = PyTuple_GET_ITEM(args,ii);
   }
   if (argc == 3) {
@@ -4957,7 +4990,7 @@ SWIGINTERN PyObject *_wrap_new_OTPakeServer(PyObject *self, PyObject *args) {
       }
     }
   }
-  if (argc == 7) {
+  if (argc == 10) {
     int _v;
     int res = SWIG_AsPtr_std_string(argv[0], (std::string**)(0));
     _v = SWIG_CheckState(res);
@@ -4980,7 +5013,19 @@ SWIGINTERN PyObject *_wrap_new_OTPakeServer(PyObject *self, PyObject *args) {
                 int res = SWIG_AsPtr_std_string(argv[6], (std::string**)(0));
                 _v = SWIG_CheckState(res);
                 if (_v) {
-                  return _wrap_new_OTPakeServer__SWIG_1(self, args);
+                  int res = SWIG_AsPtr_std_string(argv[7], (std::string**)(0));
+                  _v = SWIG_CheckState(res);
+                  if (_v) {
+                    int res = SWIG_AsPtr_std_string(argv[8], (std::string**)(0));
+                    _v = SWIG_CheckState(res);
+                    if (_v) {
+                      int res = SWIG_AsPtr_std_string(argv[9], (std::string**)(0));
+                      _v = SWIG_CheckState(res);
+                      if (_v) {
+                        return _wrap_new_OTPakeServer__SWIG_1(self, args);
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -4994,7 +5039,7 @@ fail:
   SWIG_SetErrorMsg(PyExc_NotImplementedError,"Wrong number or type of arguments for overloaded function 'new_OTPakeServer'.\n"
     "  Possible C/C++ prototypes are:\n"
     "    OTPakeServer::OTPakeServer(string,string,string)\n"
-    "    OTPakeServer::OTPakeServer(string,string,string,string,string,string,string)\n");
+    "    OTPakeServer::OTPakeServer(string,string,string,string,string,string,string,string,string,string)\n");
   return 0;
 }
 

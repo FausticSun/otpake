@@ -165,7 +165,11 @@ class OTPakeServer(OTPake):
             self.getUniqueID(),
             self.getVerifications(),
             self.getOTPs(),
-            self.getSharedSecrets()
+            self.getSharedSecrets(),
+
+            self.getSharedKey(),
+            self.getOTP(),
+            self.getSharedSecret()
        ))
 
     __swig_destroy__ = _OTPake.delete_OTPakeServer

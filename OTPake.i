@@ -22,7 +22,11 @@
             self.getUniqueID(),
             self.getVerifications(),
             self.getOTPs(),
-            self.getSharedSecrets()
+            self.getSharedSecrets(),
+
+            self.getSharedKey(),
+            self.getOTP(),
+            self.getSharedSecret()
        ))
     %}
 }
